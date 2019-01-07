@@ -17,10 +17,20 @@ def load_image(img_path, show=True):
         plt.show()
     return img_tensor
 
-new_image = load_image("sp (3).jpg")
+
+# predicting single image
+new_image = load_image("sample images/spider.jpg")
 pred = model.predict(new_image)
 print("CRAB : " +str(pred[0][0]))
 print("LOBSTER : " +str(pred[0][1]))
 print("OCTOPUS : " +str(pred[0][2]))
 print("SCORPION : " +str(pred[0][3]))
 print("SPIDER : " +str(pred[0][4]))
+
+'''
+CRAB : 8.084402e-07
+LOBSTER : 6.409423e-07
+OCTOPUS : 0.9999981
+SCORPION : 3.2840894e-10
+SPIDER : 5.02482e-07
+'''
